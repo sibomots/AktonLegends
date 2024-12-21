@@ -1,7 +1,7 @@
 {
 	"variants": {
          	"": {
-	 		"model": "aktonlegends:block/silverlight_ore_bock"
+	 		"model": "aktonlegends:block/silverlight_ore_block"
 		}
 	}
 }

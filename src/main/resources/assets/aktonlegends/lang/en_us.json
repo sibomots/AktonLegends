@@ -1,6 +1,6 @@
 {
-  "itemGroup.aktonlegends": "Akton Legends Tab",
-
+  "creativetab.aktonlegends.silverlight_items_tab": "Akton Legends Items Tab",
+  "creativetab.aktonlegends.silverlight_blocks_tab": "Akton Legends Blocks Tab",
   "item.aktonlegends.silverlight_item": "SilverLight",
   "item.aktonlegends.silverlight_ore_item": "SilverLight Ore Item",
   "item.aktonlegends.raw_silverlight_item": "Raw SilverLight Item",

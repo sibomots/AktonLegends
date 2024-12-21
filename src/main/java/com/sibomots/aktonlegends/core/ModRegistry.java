@@ -30,9 +30,6 @@
 package com.sibomots.aktonlegends.core;
 
 import com.sibomots.aktonlegends.AktonLegendsMod;
-import com.sibomots.aktonlegends.block.ModBlocks;
-import com.sibomots.aktonlegends.creat.ModCreat;
-import com.sibomots.aktonlegends.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -41,9 +38,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -103,7 +97,8 @@ public class ModRegistry {
                          new Item.Properties()
                                  .useItemDescriptionPrefix()
                                  .setId(ResourceKey.create(Registries.ITEM,
-                                         ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID, name)
+                                         ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID,
+                                                 name)
                                  ))
                  ));
     }

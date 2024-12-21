@@ -62,7 +62,8 @@ public class ModBlocks {
             "silverlight_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK,
-                            ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID, "silverlight_block")))
+                            ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID,
+                                    "silverlight_block")))
                     .strength(4f)
                     .explosionResistance(10.0f)
                     .requiresCorrectToolForDrops()
@@ -74,7 +75,8 @@ public class ModBlocks {
             "silverlight_ore_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK,
-                            ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID, "silverlight_ore_block")))
+                            ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID,
+                                    "silverlight_ore_block")))
                     .strength(4f)
                     .explosionResistance(10.0f)
                     .requiresCorrectToolForDrops()
