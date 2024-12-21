@@ -93,11 +93,12 @@ public class AktonLegendsMod
     {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModItems.SILVERLIGHT_BLOCK_ITEM);
-            event.accept(ModItems.SILVERLIGHT_ORE_ITEM);
+            event.accept(ModItems.SILVERLIGHT_ORE_BLOCK_ITEM);
         }
 
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.RAW_SILVERLIGHT_ITEM);
+            event.accept(ModItems.SILVERLIGHT_ITEM);
         }
     }
 

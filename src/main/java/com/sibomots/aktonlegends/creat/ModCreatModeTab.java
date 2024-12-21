@@ -49,10 +49,11 @@ public class ModCreatModeTab {
             () -> CreativeModeTab.builder()
             .title(Component.translatable("creativetab.aktonlegends.silverlight_items_tab"))
 //            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> ModItems.SILVERLIGHT_ORE_ITEM.get().getDefaultInstance())
+            .icon(() -> ModItems.SILVERLIGHT_ORE_BLOCK_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 // Add the example item to the tab. For your own tabs, this method is preferred over the event
-                output.accept(ModItems.SILVERLIGHT_ORE_ITEM.get());
+                output.accept(ModItems.SILVERLIGHT_ITEM.get());
+                output.accept(ModItems.SILVERLIGHT_ORE_BLOCK_ITEM.get());
                 output.accept(ModItems.SILVERLIGHT_BLOCK_ITEM.get());
                 output.accept(ModItems.RAW_SILVERLIGHT_ITEM.get());
             }).build());

@@ -44,11 +44,14 @@ public class ModItems {
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
-    public static final DeferredItem<Item> SILVERLIGHT_BLOCK_ITEM =
+    public static final DeferredItem<Item> SILVERLIGHT_ITEM =
             ModRegistry.registerModFoodItem("silverlight_item");
 
-    public static final DeferredItem<Item> SILVERLIGHT_ORE_ITEM =
-            ModRegistry.registerModFoodItem("silverlight_ore_item");
+    public static final DeferredItem<Item> SILVERLIGHT_BLOCK_ITEM =
+            ModRegistry.registerModFoodItem("silverlight_block_item");
+
+    public static final DeferredItem<Item> SILVERLIGHT_ORE_BLOCK_ITEM =
+            ModRegistry.registerModFoodItem("silverlight_ore_block_item");
 
     public static final DeferredItem<Item> RAW_SILVERLIGHT_ITEM =
             ModRegistry.registerModItem("raw_silverlight_item");
