@@ -36,6 +36,7 @@ import com.sibomots.aktonlegends.core.ModRegistry;
 import static com.sibomots.aktonlegends.core.ModRegistry.ITEMS;
 import static com.sibomots.aktonlegends.core.ModRegistry.BLOCKS;
 
+import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -73,16 +74,21 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> SILVERLIGHT_ORE_BLOCK = ModRegistry.registerBlock(
             "silverlight_ore_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .setId(ResourceKey.create(Registries.BLOCK,
-                            ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID,
-                                    "silverlight_ore_block")))
-                    .strength(4f)
-                    .explosionResistance(10.0f)
-                    .requiresCorrectToolForDrops()
-                    .sound(SoundType.AMETHYST)
-                    .lightLevel(state -> 7)
-            ));
+            () -> new DropExperienceBlock(UniformInt.of(2,4),
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK,
+                                    ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID, "silverlight_ore_block")))
+                            .strength(1.0f)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.AMETHYST)));
 
-
+    public static final DeferredBlock<Block> SILVERLIGHT_VITREOUS_ORE_BLOCK = ModRegistry.registerBlock(
+            "vitreous_silverlight_ore_block",
+            () -> new DropExperienceBlock(UniformInt.of(6,9),
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK,
+                                    ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID, "vitreous_silverlight_ore_block")))
+                            .strength(1.0f)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.AMETHYST)));
 }

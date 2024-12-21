@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "aktonlegends:silverlight_block",
+    "aktonlegends:silverlight_ore_block",
+    "aktonlegends:vitreous_silverlight_ore_block"
+  ]
+}

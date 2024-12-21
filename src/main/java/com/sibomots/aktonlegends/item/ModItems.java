@@ -44,15 +44,26 @@ public class ModItems {
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
-    public static final DeferredItem<Item> SILVERLIGHT_ITEM =
-            ModRegistry.registerModFoodItem("silverlight_item");
-
-    public static final DeferredItem<Item> SILVERLIGHT_BLOCK_ITEM =
-            ModRegistry.registerModFoodItem("silverlight_block_item");
-
-    public static final DeferredItem<Item> SILVERLIGHT_ORE_BLOCK_ITEM =
-            ModRegistry.registerModFoodItem("silverlight_ore_block_item");
-
     public static final DeferredItem<Item> RAW_SILVERLIGHT_ITEM =
-            ModRegistry.registerModItem("raw_silverlight_item");
+            ModRegistry.registerModItem("raw_silverlight");
+
+    public static final DeferredItem<Item> SILVERLIGHT_ITEM =
+            ModRegistry.registerModFoodItem("silverlight");
+
+    public static final DeferredItem<Item> VITREOUS_SILVERLIGHT_ITEM =
+            ModRegistry.registerModFoodItem("vitreous_silverlight");
+
+    public static final DeferredItem<Item> SILVERLIGHT_ITEMBLOCK =
+            ModRegistry.registerModFoodItem("silverlight_itemblock");
+
+    public static final DeferredItem<Item> SILVERLIGHT_ORE_ITEMBLOCK =
+            ModRegistry.registerModItem("silverlight_ore_itemblock");
+
+    public static final DeferredItem<Item> SILVERLIGHT_VITREOUS_ORE_ITEMBLOCK =
+            ModRegistry.registerModItem("vitreous_silverlight_ore_itemblock");
+
+    public static final DeferredItem<Item> SILVERLIGHT_VITREOUS_ITEMBLOCK =
+            ModRegistry.registerModItem("vitreous_silverlight_itemblock");
+
+
 }

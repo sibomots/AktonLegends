@@ -1,11 +1,19 @@
 {
-  "creativetab.aktonlegends.silverlight_items_tab": "Akton Legends Items Tab",
-  "creativetab.aktonlegends.silverlight_blocks_tab": "Akton Legends Blocks Tab",
-  "item.aktonlegends.silverlight_item": "SilverLight",
-  "item.aktonlegends.silverlight_ore_item": "SilverLight Ore Item",
-  "item.aktonlegends.raw_silverlight_item": "Raw SilverLight Item",
-  "item.aktonlegends.silverlight_block_item": "SilverLight Block Item",
+  "creativetab.aktonlegends.silverlight_items_tab": "Akton Legends Items",
+  "creativetab.aktonlegends.silverlight_blocks_tab": "Akton Legends Blocks",
+
+  "item.aktonlegends.raw_silverlight": "Raw SilverLight",
+  "item.aktonlegends.silverlight": "SilverLight",
+  "item.aktonlegends.vitreous_silverlight": "Vitreous SilverLight Ore",
+
+  "item.aktonlegends.silverlight_ore": "SilverLight Ore",
+  "item.aktonlegends.vitreous_silverlight_ore": "Vitreous SilverLight Ore",
+
+  "item.aktonlegends.silverlight_itemblock": "Block of SilverLight",
+  "item.aktonlegends.silverlight_ore_itemblock": "Block of SilverLight Ore",
+  "item.aktonlegends.vitreous_silverlight_ore_itemblock": "Block of Vitreous SilverLight Ore",
 
   "block.aktonlegends.silverlight_block": "Block of SilverLight",
-  "block.aktonlegends.silverlight_ore_block": "SilverLight Ore Block"
+  "block.aktonlegends.silverlight_ore_block": "Block of SilverLight Ore",
+  "block.aktonlegends.vitreous_silverlight_ore_block": "Block of Vitreous SilverLight Ore"
 }

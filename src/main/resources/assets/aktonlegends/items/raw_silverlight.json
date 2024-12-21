@@ -1,6 +1,6 @@
 {
     "model": {
         "type": "minecraft:model",
-        "model": "aktonlegends:item/silverlight_item"
+        "model": "aktonlegends:item/raw_silverlight"
     }
 }
