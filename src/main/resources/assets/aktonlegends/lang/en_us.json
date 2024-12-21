@@ -2,5 +2,10 @@
   "itemGroup.aktonlegends": "Akton Legends Tab",
 
   "item.aktonlegends.silverlight_item": "SilverLight",
-  "block.aktonlegends.silverlight_block": "Block of SilverLight"
+  "item.aktonlegends.silverlight_ore_item": "SilverLight Ore Item",
+  "item.aktonlegends.raw_silverlight_item": "Raw SilverLight Item",
+  "item.aktonlegends.silverlight_block_item": "SilverLight Block Item",
+
+  "block.aktonlegends.silverlight_block": "Block of SilverLight",
+  "block.aktonlegends.silverlight_ore_block": "SilverLight Ore Block"
 }
