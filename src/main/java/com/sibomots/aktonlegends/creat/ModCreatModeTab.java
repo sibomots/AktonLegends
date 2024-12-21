@@ -71,7 +71,7 @@ public class ModCreatModeTab {
                         // Add the example item to the tab. For your own tabs, this method is preferred over the event
                         output.accept(ModBlocks.SILVERLIGHT_BLOCK.get());
                         output.accept(ModBlocks.SILVERLIGHT_ORE_BLOCK.get());
-                        output.accept(ModBlocks.SILVERLIGHT_VITREOUS_ORE_BLOCK.get());
+                        output.accept(ModBlocks.VITREOUS_SILVERLIGHT_ORE_BLOCK.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

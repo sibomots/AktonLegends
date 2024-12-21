@@ -77,17 +77,19 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(2,4),
                     BlockBehaviour.Properties.of()
                             .setId(ResourceKey.create(Registries.BLOCK,
-                                    ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID, "silverlight_ore_block")))
+                                    ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID,
+                                            "silverlight_ore_block")))
                             .strength(1.0f)
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.AMETHYST)));
 
-    public static final DeferredBlock<Block> SILVERLIGHT_VITREOUS_ORE_BLOCK = ModRegistry.registerBlock(
+    public static final DeferredBlock<Block> VITREOUS_SILVERLIGHT_ORE_BLOCK = ModRegistry.registerBlock(
             "vitreous_silverlight_ore_block",
-            () -> new DropExperienceBlock(UniformInt.of(6,9),
+            () -> new DropExperienceBlock(UniformInt.of(2,4),
                     BlockBehaviour.Properties.of()
                             .setId(ResourceKey.create(Registries.BLOCK,
-                                    ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID, "vitreous_silverlight_ore_block")))
+                                    ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID,
+                                            "vitreous_silverlight_ore_block")))
                             .strength(1.0f)
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.AMETHYST)));

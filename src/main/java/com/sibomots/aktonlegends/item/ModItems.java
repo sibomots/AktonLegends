@@ -48,13 +48,13 @@ public class ModItems {
             ModRegistry.registerModItem("raw_silverlight");
 
     public static final DeferredItem<Item> SILVERLIGHT_ITEM =
-            ModRegistry.registerModFoodItem("silverlight");
+            ModRegistry.registerModItem("silverlight");
 
     public static final DeferredItem<Item> VITREOUS_SILVERLIGHT_ITEM =
-            ModRegistry.registerModFoodItem("vitreous_silverlight");
+            ModRegistry.registerModItem("vitreous_silverlight");
 
     public static final DeferredItem<Item> SILVERLIGHT_ITEMBLOCK =
-            ModRegistry.registerModFoodItem("silverlight_itemblock");
+            ModRegistry.registerModItem("silverlight_itemblock");
 
     public static final DeferredItem<Item> SILVERLIGHT_ORE_ITEMBLOCK =
             ModRegistry.registerModItem("silverlight_ore_itemblock");

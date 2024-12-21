@@ -1,7 +1,7 @@
 {
-    "parent": "minecraft:block/cube_all",
-    "textures": {
-	    "all": "aktonlegends:block/silverlight_block"
-    }
+"parent": "minecraft:block/cube_all",
+"textures": {
+"all": "aktonlegends:block/silverlight_block"
+}
 }
 

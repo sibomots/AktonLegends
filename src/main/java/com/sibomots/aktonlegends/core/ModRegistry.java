@@ -66,6 +66,7 @@ public class ModRegistry {
                 ));
     }
 
+    /*
     public static DeferredItem<Item> registerModFoodItem(String name)
     {
         return ITEMS.register(name, () ->
@@ -82,6 +83,7 @@ public class ModRegistry {
                                 ))
                 ));
     }
+    */
 
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {

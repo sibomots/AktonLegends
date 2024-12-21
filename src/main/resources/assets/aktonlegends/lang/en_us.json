@@ -4,14 +4,12 @@
 
   "item.aktonlegends.raw_silverlight": "Raw SilverLight",
   "item.aktonlegends.silverlight": "SilverLight",
-  "item.aktonlegends.vitreous_silverlight": "Vitreous SilverLight Ore",
+  "item.aktonlegends.vitreous_silverlight": "Vitreous SilverLight",
 
-  "item.aktonlegends.silverlight_ore": "SilverLight Ore",
-  "item.aktonlegends.vitreous_silverlight_ore": "Vitreous SilverLight Ore",
-
-  "item.aktonlegends.silverlight_itemblock": "Block of SilverLight",
-  "item.aktonlegends.silverlight_ore_itemblock": "Block of SilverLight Ore",
-  "item.aktonlegends.vitreous_silverlight_ore_itemblock": "Block of Vitreous SilverLight Ore",
+  "item.aktonlegends.silverlight_itemblock": "SilverLight Item",
+  "item.aktonlegends.silverlight_ore_itemblock": "SilverLight Ore",
+  "item.aktonlegends.vitreous_silverlight_ore_itemblock": "Vitreous SilverLight Ore",
+  "item.aktonlegends.vitreous_silverlight_itemblock": "Vitreous SilverLight Item",
 
   "block.aktonlegends.silverlight_block": "Block of SilverLight",
   "block.aktonlegends.silverlight_ore_block": "Block of SilverLight Ore",
