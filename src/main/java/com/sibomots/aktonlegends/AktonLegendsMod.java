@@ -3,6 +3,7 @@ package com.sibomots.aktonlegends;
 import com.sibomots.aktonlegends.block.ModBlocks;
 import com.sibomots.aktonlegends.creat.ModCreatModeTab;
 import com.sibomots.aktonlegends.item.ModItems;
+import net.neoforged.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -28,6 +29,18 @@ public class AktonLegendsMod
     public static final String MODID = "aktonlegends";
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    private void foo()
+    {
+        if (FMLEnvironment.dist == Dist.CLIENT)
+        {
+            LOGGER.info("On the Client... Enjoy");
+        }
+        else if (FMLEnvironment.dist == Dist.DEDICATED_SERVER)
+        {
+            LOGGER.info("On the Server... Enjoy");
+        }
+    }
+
     // The constructor for the mod class is the first code that 
     // is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or 
@@ -41,6 +54,7 @@ public class AktonLegendsMod
         NeoForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        foo();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
