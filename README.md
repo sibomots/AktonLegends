@@ -3,27 +3,13 @@
 
 # Akton Legends
 
-TBD
-
-[LORE](docs/LORE.md)
+[Wiki](https://github.com/sibomots/AktonLegends/wiki)
 
 
-[MANUAL](docs/MANUAL.md)
+## More...
+
+TBD.
+
+<hr>
 
 
-## How to Install
-TBD
-
-[INSTALL](docs/INSTALL.md)
-
-
-## How to Play
-TBD
-
-[PLAY](docs/PLAY.md)
-
-
-## Reference
-TBD
-
-[REFERENCES](docs/REFS.md)
