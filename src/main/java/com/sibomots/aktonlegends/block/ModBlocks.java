@@ -29,37 +29,37 @@
  *******************************************************************************/
 package com.sibomots.aktonlegends.block;
 
-import com.mojang.logging.LogUtils;
-import com.nimbusds.jose.util.Resource;
 import com.sibomots.aktonlegends.AktonLegendsMod;
-import com.sibomots.aktonlegends.core.ModRegistry;
-import static com.sibomots.aktonlegends.core.ModRegistry.ITEMS;
-import static com.sibomots.aktonlegends.core.ModRegistry.BLOCKS;
+import com.sibomots.aktonlegends.block.custom.BloomeryBlock;
 
-import net.minecraft.client.resources.sounds.Sound;
+import com.sibomots.aktonlegends.block.entity.BloomeryBlockEntity;
+import com.sibomots.aktonlegends.creat.ModCreatModeTab;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import org.slf4j.Logger;
-import com.mojang.logging.LogUtils;
 
 import java.util.function.Supplier;
 
+import static com.sibomots.aktonlegends.core.ModRegistry.*;
+
 public class ModBlocks {
     public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
+       BLOCKS.register(eventBus);
+       BLOCK_ENTITY_TYPES.register(eventBus);
+       // MENU_REGISTRAR.register(eventBus);
     }
 
-    public static final DeferredBlock<Block> SILVERLIGHT_BLOCK = ModRegistry.registerBlock(
+    public static final DeferredBlock<Block> SILVERLIGHT_BLOCK = registerBlock(
             "silverlight_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK,
@@ -70,9 +70,9 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST)
                     .lightLevel(state -> 7)
-            ));
+            ), ModCreatModeTab.AKTONLEGENDS_BLOCKS_TAB);
 
-    public static final DeferredBlock<Block> SILVERLIGHT_ORE_BLOCK = ModRegistry.registerBlock(
+    public static final DeferredBlock<Block> SILVERLIGHT_ORE_BLOCK = registerBlock(
             "silverlight_ore_block",
             () -> new DropExperienceBlock(UniformInt.of(2,4),
                     BlockBehaviour.Properties.of()
@@ -81,9 +81,9 @@ public class ModBlocks {
                                             "silverlight_ore_block")))
                             .strength(1.0f)
                             .requiresCorrectToolForDrops()
-                            .sound(SoundType.AMETHYST)));
+                            .sound(SoundType.AMETHYST)), ModCreatModeTab.AKTONLEGENDS_BLOCKS_TAB);
 
-    public static final DeferredBlock<Block> VITREOUS_SILVERLIGHT_ORE_BLOCK = ModRegistry.registerBlock(
+    public static final DeferredBlock<Block> VITREOUS_SILVERLIGHT_ORE_BLOCK = registerBlock(
             "vitreous_silverlight_ore_block",
             () -> new DropExperienceBlock(UniformInt.of(2,4),
                     BlockBehaviour.Properties.of()
@@ -92,5 +92,57 @@ public class ModBlocks {
                                             "vitreous_silverlight_ore_block")))
                             .strength(1.0f)
                             .requiresCorrectToolForDrops()
-                            .sound(SoundType.AMETHYST)));
+                            .sound(SoundType.AMETHYST)), ModCreatModeTab.AKTONLEGENDS_BLOCKS_TAB);
+
+
+    /* public static final DeferredBlock<Block>
+            BLOOMERY_BLOCK  = registerBlock("bloomery_block",
+            ()  -> new BloomeryBlock(
+                    BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()),
+                    ModCreatModeTab.AKTONLEGENDS_ITEMS_TAB);
+*/
+
+    /*
+    public static final DeferredBlock<BloomeryBlock> BLOOMERY_BLOCKXX
+          =  BLOCKS.register("bloomery_block",
+                    ()  -> new BloomeryBlock(
+            BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK,
+                            ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID,
+                                    "bloomery_block")))
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion())
+    );
+     */
+
+    public static final DeferredBlock<Block> BLOOMERY_BLOCK = registerBlock(
+            "bloomery_block",
+            () -> new BloomeryBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK,
+                                    ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID,
+                                            "vitreous_silverlight_ore_block")))
+                            .strength(1.0f)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.AMETHYST)),
+            ModCreatModeTab.AKTONLEGENDS_BLOCKS_TAB);
+
+
+    public static final Supplier<BlockEntityType<BloomeryBlockEntity>> BLOOMERY_BLOCK_ENTITY
+            = BLOCK_ENTITY_TYPES.register(
+            "bloomery_block_entity",
+            // The block entity type.
+            () -> new BlockEntityType<>(
+                    // The supplier to use for constructing the block entity instances.
+                    BloomeryBlockEntity::new,
+                    // A vararg of blocks that can have this block entity.
+                    // This assumes the existence of the referenced blocks as DeferredBlock<Block>s.
+                    ModBlocks.BLOOMERY_BLOCK.get())
+            );
 }

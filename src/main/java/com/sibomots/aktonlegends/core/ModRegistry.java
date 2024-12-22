@@ -29,15 +29,28 @@
  *******************************************************************************/
 package com.sibomots.aktonlegends.core;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.sibomots.aktonlegends.AktonLegendsMod;
+import com.sibomots.aktonlegends.block.ModBlocks;
+import com.sibomots.aktonlegends.block.custom.BloomeryBlock;
+import com.sibomots.aktonlegends.block.entity.BloomeryBlockEntity;
+import io.netty.resolver.DefaultHostsFileEntriesResolver;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -53,6 +66,19 @@ public class ModRegistry {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS
             = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AktonLegendsMod.MODID);
+
+    /*
+    public static final DeferredRegister<MenuType<?>> MENU_REGISTRAR =
+            DeferredRegister.create(Registries.MENU, AktonLegendsMod.MODID);
+*/
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES =
+            DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, AktonLegendsMod.MODID);
+
+    /*
+    public static final Supplier<MenuType<BloomeryMenu>> BLOOMERY_MENU
+            = MENU_REGISTRAR.register("my_menu",
+            () -> new MenuType<>(BloomeryMenu::new, FeatureFlags.DEFAULT_FLAGS));
+*/
 
     public static DeferredItem<Item> registerModItem(String name)
     {
@@ -85,7 +111,7 @@ public class ModRegistry {
     }
     */
 
-    public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
+    public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block, DeferredHolder<CreativeModeTab, CreativeModeTab> aktonlegendsBlocksTab)
     {
          DeferredBlock<T> toReturn = BLOCKS.register(name, block);
          registerBlockItem(name, toReturn);
@@ -104,4 +130,22 @@ public class ModRegistry {
                                  ))
                  ));
     }
+
+    /*
+    // In some registration class
+    public static final DeferredRegister<MapCodec<? extends Block>>
+            REGISTRAR = DeferredRegister.create(BuiltInRegistries.BLOCK_TYPE,
+            AktonLegendsMod.MODID);
+
+    public static final Supplier<MapCodec<BloomeryBlock>>
+            COMPLEX_CODEC = REGISTRAR.register(
+            "simple",
+            () -> RecordCodecBuilder.mapCodec(instance ->
+                    instance.group(
+                            Codec.INT.fieldOf("value")
+                                    .forGetter(BloomeryBlock::getValue),
+                            BlockBehaviour.propertiesCodec() // represents the BlockBehavior.Properties parameter
+                    ).apply(instance, BloomeryBlock::new)
+            ));
+     */
 }

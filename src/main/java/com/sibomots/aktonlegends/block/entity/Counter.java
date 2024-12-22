@@ -27,45 +27,13 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *******************************************************************************/
-package com.sibomots.aktonlegends.item;
+package com.sibomots.aktonlegends.block.entity;
 
-import com.mojang.logging.LogUtils;
-import com.sibomots.aktonlegends.AktonLegendsMod;
-import com.sibomots.aktonlegends.core.ModRegistry;
-
-import static com.sibomots.aktonlegends.core.ModRegistry.BLOCKS;
-import static com.sibomots.aktonlegends.core.ModRegistry.ITEMS;
-import net.minecraft.world.item.Item;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
-
-public class ModItems {
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
+public class Counter
+{
+    static int x = 0;
+    public static int Increment()
+    {
+        return ++x;
     }
-    public static final DeferredItem<Item> RAW_SILVERLIGHT_ITEM =
-            ModRegistry.registerModItem("raw_silverlight");
-
-    public static final DeferredItem<Item> SILVERLIGHT_ITEM =
-            ModRegistry.registerModItem("silverlight");
-
-    public static final DeferredItem<Item> VITREOUS_SILVERLIGHT_ITEM =
-            ModRegistry.registerModItem("vitreous_silverlight");
-
-    public static final DeferredItem<Item> SILVERLIGHT_ITEMBLOCK =
-            ModRegistry.registerModItem("silverlight_itemblock");
-
-    public static final DeferredItem<Item> SILVERLIGHT_ORE_ITEMBLOCK =
-            ModRegistry.registerModItem("silverlight_ore_itemblock");
-
-    public static final DeferredItem<Item> SILVERLIGHT_VITREOUS_ORE_ITEMBLOCK =
-            ModRegistry.registerModItem("vitreous_silverlight_ore_itemblock");
-
-    public static final DeferredItem<Item> SILVERLIGHT_VITREOUS_ITEMBLOCK =
-            ModRegistry.registerModItem("vitreous_silverlight_itemblock");
-
-    public static final DeferredItem<Item> BLOOMERY_ITEMBLOCK =
-            ModRegistry.registerModItem("bloomery_itemblock");
-
 }

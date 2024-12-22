@@ -33,6 +33,7 @@ import static com.sibomots.aktonlegends.core.ModRegistry.CREATIVE_MODE_TABS;
 
 import com.sibomots.aktonlegends.AktonLegendsMod;
 import com.sibomots.aktonlegends.block.ModBlocks;
+import com.sibomots.aktonlegends.block.custom.BloomeryBlock;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -59,6 +60,7 @@ public class ModCreatModeTab {
                 output.accept(ModItems.SILVERLIGHT_VITREOUS_ITEMBLOCK.get());
                 output.accept(ModItems.SILVERLIGHT_ITEMBLOCK.get());
                 output.accept(ModItems.RAW_SILVERLIGHT_ITEM.get());
+               // output.accept(ModItems.BLOOMERY_ITEMBLOCK.get());
             }).build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> AKTONLEGENDS_BLOCKS_TAB
@@ -72,6 +74,7 @@ public class ModCreatModeTab {
                         output.accept(ModBlocks.SILVERLIGHT_BLOCK.get());
                         output.accept(ModBlocks.SILVERLIGHT_ORE_BLOCK.get());
                         output.accept(ModBlocks.VITREOUS_SILVERLIGHT_ORE_BLOCK.get());
+                        output.accept(ModBlocks.BLOOMERY_BLOCK.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {
