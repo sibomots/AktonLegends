@@ -59,19 +59,6 @@ public class ModBlocks {
        // MENU_REGISTRAR.register(eventBus);
     }
 
-    public static final DeferredBlock<Block> SILVERLIGHT_BLOCK = registerBlock(
-            "silverlight_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .setId(ResourceKey.create(Registries.BLOCK,
-                            ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID,
-                                    "silverlight_block")))
-                    .strength(4f)
-                    .explosionResistance(10.0f)
-                    .requiresCorrectToolForDrops()
-                    .sound(SoundType.AMETHYST)
-                    .lightLevel(state -> 7)
-            ), ModCreatModeTab.AKTONLEGENDS_BLOCKS_TAB);
-
     public static final DeferredBlock<Block> SILVERLIGHT_ORE_BLOCK = registerBlock(
             "silverlight_ore_block",
             () -> new DropExperienceBlock(UniformInt.of(2,4),

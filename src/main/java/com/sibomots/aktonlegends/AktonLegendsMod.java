@@ -68,15 +68,14 @@ public class AktonLegendsMod
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModItems.SILVERLIGHT_ITEMBLOCK);
-            event.accept(ModItems.SILVERLIGHT_ORE_ITEMBLOCK);
-            event.accept(ModItems.SILVERLIGHT_VITREOUS_ORE_ITEMBLOCK);
-            event.accept(ModItems.BLOOMERY_ITEMBLOCK);
+            event.accept(ModBlocks.BLOOMERY_BLOCK);
+            event.accept(ModBlocks.SILVERLIGHT_ORE_BLOCK);
+            event.accept(ModBlocks.VITREOUS_SILVERLIGHT_ORE_BLOCK);
         }
 
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.RAW_SILVERLIGHT_ITEM);
-            event.accept(ModItems.SILVERLIGHT_ITEM);
+            event.accept(ModItems.SILVERLIGHT_ORE_ITEMBLOCK);
+            event.accept(ModItems.SILVERLIGHT_VITREOUS_ORE_ITEMBLOCK);
         }
     }
 

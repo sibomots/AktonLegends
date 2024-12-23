@@ -53,13 +53,10 @@ public class ModCreatModeTab {
             .icon(() -> ModItems.SILVERLIGHT_ORE_ITEMBLOCK.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 // Add the example item to the tab. For your own tabs, this method is preferred over the event
-                output.accept(ModItems.SILVERLIGHT_ITEM.get());
                 output.accept(ModItems.VITREOUS_SILVERLIGHT_ITEM.get());
                 output.accept(ModItems.SILVERLIGHT_ORE_ITEMBLOCK.get());
                 output.accept(ModItems.SILVERLIGHT_VITREOUS_ORE_ITEMBLOCK.get());
                 output.accept(ModItems.SILVERLIGHT_VITREOUS_ITEMBLOCK.get());
-                output.accept(ModItems.SILVERLIGHT_ITEMBLOCK.get());
-                output.accept(ModItems.RAW_SILVERLIGHT_ITEM.get());
                // output.accept(ModItems.BLOOMERY_ITEMBLOCK.get());
             }).build());
 
@@ -68,10 +65,9 @@ public class ModCreatModeTab {
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("creativetab.aktonlegends.silverlight_blocks_tab"))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(AktonLegendsMod.MODID, "silverlight_items_tab"))
-                    .icon(() -> ModItems.SILVERLIGHT_ITEMBLOCK.get().getDefaultInstance())
+                    .icon(() -> ModItems.SILVERLIGHT_ORE_ITEMBLOCK.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
                         // Add the example item to the tab. For your own tabs, this method is preferred over the event
-                        output.accept(ModBlocks.SILVERLIGHT_BLOCK.get());
                         output.accept(ModBlocks.SILVERLIGHT_ORE_BLOCK.get());
                         output.accept(ModBlocks.VITREOUS_SILVERLIGHT_ORE_BLOCK.get());
                         output.accept(ModBlocks.BLOOMERY_BLOCK.get());

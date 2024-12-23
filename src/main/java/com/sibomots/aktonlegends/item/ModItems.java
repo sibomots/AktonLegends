@@ -44,17 +44,8 @@ public class ModItems {
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
-    public static final DeferredItem<Item> RAW_SILVERLIGHT_ITEM =
-            ModRegistry.registerModItem("raw_silverlight");
-
-    public static final DeferredItem<Item> SILVERLIGHT_ITEM =
-            ModRegistry.registerModItem("silverlight");
-
     public static final DeferredItem<Item> VITREOUS_SILVERLIGHT_ITEM =
             ModRegistry.registerModItem("vitreous_silverlight");
-
-    public static final DeferredItem<Item> SILVERLIGHT_ITEMBLOCK =
-            ModRegistry.registerModItem("silverlight_itemblock");
 
     public static final DeferredItem<Item> SILVERLIGHT_ORE_ITEMBLOCK =
             ModRegistry.registerModItem("silverlight_ore_itemblock");
